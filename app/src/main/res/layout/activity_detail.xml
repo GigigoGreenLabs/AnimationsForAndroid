@@ -1,0 +1,140 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <android.support.design.widget.AppBarLayout
+      android:id="@+id/main.appbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/transparent"
+      >
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/main.collapsing"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+        >
+
+      <FrameLayout
+          android:id="@+id/main.framelayout.title"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:layout_gravity="bottom|center_horizontal"
+          android:background="@color/colorPrimary"
+          android:orientation="vertical"
+          app:layout_collapseMode="parallax"
+          >
+
+        <LinearLayout
+            android:id="@+id/main.linearlayout.title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:gravity="bottom|center"
+              android:text="WOLOLO"
+              android:textColor="@android:color/white"
+              android:textSize="30sp"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="4dp"
+              android:text="WELELE"
+              android:textColor="@android:color/white"
+              />
+
+        </LinearLayout>
+      </FrameLayout>
+    </android.support.design.widget.CollapsingToolbarLayout>
+  </android.support.design.widget.AppBarLayout>
+
+
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="none"
+      app:behavior_overlapTop="30dp"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+      >
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardElevation="8dp"
+        app:contentPadding="16dp"
+        >
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:lineSpacingExtra="8dp"
+          android:text="@string/lorem"
+          android:textSize="18sp"
+          />
+    </android.support.v7.widget.CardView>
+
+
+  </android.support.v4.widget.NestedScrollView>
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/main.toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@color/colorPrimary"
+      app:layout_anchor="@id/main.framelayout.title"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark"
+      app:title=""
+      >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+      <Space
+          android:layout_width="@dimen/image_final_width"
+          android:layout_height="@dimen/image_final_width"
+          />
+
+      <TextView
+          android:id="@+id/main.textview.title"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical"
+          android:layout_marginLeft="8dp"
+          android:text="LOLO"
+          android:textColor="@android:color/white"
+          android:textSize="20sp"
+          />
+
+    </LinearLayout>
+  </android.support.v7.widget.Toolbar>
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:layout_width="@dimen/image_width"
+      android:layout_height="@dimen/image_width"
+      android:layout_gravity="center"
+      android:src="@drawable/ic_launcher"
+      app:border_color="@android:color/white"
+      app:border_width="2dp"
+      app:layout_behavior="gigigogreenlabs.gigigo.gmail.animation.AvatarImageBehavior"
+      />
+
+
+
+</android.support.design.widget.CoordinatorLayout>
